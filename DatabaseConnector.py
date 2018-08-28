@@ -5,6 +5,7 @@ import csv
 import os
 import pandas as pd
 
+
 class DatabaseConnector:
     def __init__(self, username, password, host, database, csvfile=None):
         '''
