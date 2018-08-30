@@ -178,7 +178,7 @@ class DatabaseConnector:
             - int count: Number of people currently
             - int status: 3-level variable indicating how crowded
         '''
-        if not self.csvfile or os.path.isfile(self.csvfile) :
+        if not self.csvfile or not os.path.isfile(self.csvfile) :
             raise IOError ('Error: CSV file does not exist')
 
         csvrow = [newrow['datetime'].strftime('%Y-%m-%d'), newrow['datetime'].strftime('%H:%M:%S'), newrow['count'], newrow['status']]
